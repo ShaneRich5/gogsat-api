@@ -1,0 +1,49 @@
+{
+    "name": "shanerich5/go-gsat-client",
+    "type": "library",
+    "description": "A wrapper for using the GoGsat's Api",
+    "keywords": [
+        "gogsat", "api", "wrapper", "client", "learninghub"
+    ],
+    "homepage": "https://github.com/shanerich5/go-gsat-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shane Richards",
+            "email": "shane.richards121@gmail.com",
+            "homepage": "https://github.com/ShaneRich5",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShaneRich5\\GoGsat\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ShaneRich5\\GoGsat\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
